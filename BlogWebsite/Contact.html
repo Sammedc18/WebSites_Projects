@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Blog.css">
+    <style>
+        /* Styling the Navbar */
+        .navbar {
+            background-color: #8D99AE; /* Pink Color */
+            height: 120px; /* Increased Height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .navbar img {
+            height: 100px; /* Adjust Logo Size */
+            width: auto;
+        }
+        .nav-link {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #000 !important; /* Black Color for Nav Links */
+        }
+        .navbar h1 {
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.8); /* Blackish Gray */
+            margin-left: 20px;
+        }
+        /* Body Background Color */
+        body {
+            background-color: #EDF2F4; /* Light Pink Background */
+        }
+        .contact-container {
+            margin-top: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .contact-title {
+            text-align: center;
+            color: #8D99AE;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .contact-form textarea {
+            resize: vertical;
+        }
+        .social-media {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .social-media a {
+            margin: 0 15px;
+            font-size: 30px;
+            color: #8D99AE;
+            text-decoration: none;
+        }
+        .social-media a:hover {
+            color: #ff1493; /* Darker Pink on Hover */
+        }
+        /* Responsive Design for Small Screens */
+        @media (max-width: 768px) {
+            .contact-container {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="Home.html">
+                <img src="freepik__upload__38471.jpeg" alt="Chaat Recipe Logo" id="logo"> <!-- Logo Image -->
+                <h1><b>Indian Chaat</b></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><b><a class="nav-link" href="Home.html">Home</a></b></li>
+                    <li class="nav-item"><b><a class="nav-link" href="About_Blog.html">About</a></b></li>
+                    <li class="nav-item"><b><a class="nav-link" href="Contact.html">Contact</a></b></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h1 class="contact-title">Contact Us</h1>
+        <form class="contact-form">
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+
+        <!-- Include Font Awesome CDN -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+<!-- Social Media Links -->
+<div class="social-media">
+    <a href="https://www.facebook.com" target="_blank" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="https://www.instagram.com" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://www.youtube.com/results?search_query=madhurasrecipe+in+marathi+" target="_blank" title="YouTube">
+        <i class="fab fa-youtube"></i>
+    </a>
+</div>
+
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

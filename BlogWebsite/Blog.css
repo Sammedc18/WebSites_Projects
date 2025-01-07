@@ -1,0 +1,52 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styling */
+.navbar {
+    margin-bottom: 20px;
+}
+
+/* Card Hover Effect */
+.hover-effect {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-effect:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title a {
+    color: #000;
+}
+
+.card-title a:hover {
+    color: #007bff;
+    text-decoration: underline;
+}
+    /* Styling Cards to Have Same Size */
+    .card {
+        height: 350px; /* Fixed Height for Cards */
+        width: 100%; /* Full Width */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    /* Card Image Styling */
+    .card img {
+        height: 280px; /* Fixed Height for Images */
+        object-fit: cover; /* Ensure Images Cover the Area */
+        width: 100%; /* Ensure Images Fit the Card's Width */
+    }
+
+    /* Card Title Styling */
+    .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+

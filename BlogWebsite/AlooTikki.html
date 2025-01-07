@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aloo Tikki Recipe</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Blog.css">
+    <style>
+        /* Styling the Navbar */
+        .navbar {
+            background-color: #8D99AE; /* Pink Color */
+            height: 120px; /* Increased Height */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .navbar img {
+            height: 100px; /* Adjust Logo Size */
+            width: auto;
+        }
+        .nav-link {
+            font-size: 20px;
+            margin-right: 10px;
+            color: #000 !important; /* Black Color for Nav Links */
+        }
+        .navbar h1 {
+            font-size: 30px;
+            color: rgba(0, 0, 0, 0.8); /* Blackish Gray */
+            margin-left: 20px;
+        }
+        /* Body Background Color */
+        body {
+            background-color: #EDF2F4; /* Light Pink Background */
+        }
+        .recipe-container {
+            margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+        .recipe-title {
+            text-align: center;
+            color: #8D99AE;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .recipe-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .recipe-image {
+            flex: 1 1 40%;
+            max-width: 300px;
+        }
+        .recipe-image img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .recipe-details {
+            flex: 1 1 55%;
+        }
+        .recipe-details h4 {
+            color: #8D99AE;
+        }
+        .ingredients ul, .instructions ol {
+            margin-left: 20px;
+        }
+        /* Responsive Design for Small Screens */
+        @media (max-width: 768px) {
+            .recipe-content {
+                flex-direction: column;
+                align-items: center;
+            }
+            .recipe-image, .recipe-details {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="Home.html">
+                <img src="freepik__upload__38471.jpeg" alt="Chaat Recipe Logo" id="logo"> <!-- Logo Image -->
+                <h1><b> Indian Chaat</b></h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><b><a class="nav-link" href="Home.html">Home</a></b></li>
+                    <li class="nav-item"><b><a class="nav-link" href="About_Blog.html">About</a></b></li>
+                    <li class="nav-item"><b><a class="nav-link" href="Contact.html">Contact</a></b></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Recipe Section -->
+    <div class="recipe-container">
+        <h1 class="recipe-title">Aloo Tikki Recipe</h1>
+        <div class="recipe-content">
+            <!-- Image Section -->
+            <div class="recipe-image">
+                <img src="Aloo-Tikki-Chaat-2.jpg" alt="Aloo Tikki">
+            </div>
+            <!-- Details Section -->
+            <div class="recipe-details">
+                <div class="ingredients">
+                    <h4><b>Ingredients</b></h4>
+                    <ul>
+                        <li>4-5 boiled potatoes (mashed)</li>
+                        <li>1/2 cup boiled peas</li>
+                        <li>1 small onion (finely chopped)</li>
+                        <li>1-2 green chilies (finely chopped)</li>
+                        <li>1 tablespoon ginger (grated)</li>
+                        <li>1 tablespoon coriander leaves (chopped)</li>
+                        <li>1 teaspoon cumin powder</li>
+                        <li>1 teaspoon garam masala</li>
+                        <li>1 teaspoon red chili powder</li>
+                        <li>Salt to taste</li>
+                        <li>1/2 cup breadcrumbs</li>
+                        <li>Oil for frying</li>
+                    </ul>
+                </div>
+                <div class="instructions">
+                    <h4><b>Instructions</b></h4>
+                    <ol>
+                        <li>In a large bowl, mix the mashed potatoes and boiled peas.</li>
+                        <li>Add the chopped onion, green chilies, ginger, and coriander leaves to the mixture.</li>
+                        <li>Season the mixture with cumin powder, garam masala, red chili powder, and salt.</li>
+                        <li>Mix everything together well, and divide the mixture into small portions.</li>
+                        <li>Shape each portion into a round or oval patty (tikki).</li>
+                        <li>Roll each tikki in breadcrumbs to coat evenly.</li>
+                        <li>Heat oil in a pan and fry the tikkis until they are golden brown and crispy on both sides.</li>
+                        <li>Serve hot with green chutney or tamarind chutney.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
