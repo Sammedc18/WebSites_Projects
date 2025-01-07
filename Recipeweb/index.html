@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Recipe Website</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#recipes">Recipes</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="recipes">
+            <h2>Featured Recipe</h2>
+            <article>
+                <h3>Veg Biryani Recipe</h3>
+                <p>A classic Italian pasta dish made with eggs, cheese, pancetta, and pepper.</p>
+                <h4>Ingredients:</h4>
+                <ul>
+                      <li>2 cups Basmati Rice</li>
+            <li>1 medium Onion, sliced</li>
+            <li>1 medium Tomato, chopped</li>
+            <li>2 Green Chillies, slit</li>
+            <li>1 inch Ginger-Garlic Paste</li>
+            <li>1 tsp Turmeric Powder</li>
+            <li>1 tsp Red Chilli Powder</li>
+            <li>1 tsp Coriander Powder</li>
+            <li>1 tsp Cumin Powder</li>
+            <li>1 tsp Garam Masala</li>
+            <li>1/2 tsp Cardamom Powder</li>
+            <li>1/4 cup Mint Leaves</li>
+            <li>1/4 cup Coriander Leaves</li>
+            <li>2 tbsp Ghee or Oil</li>
+            <li>Salt to taste</li>
+            <li>Mixed Vegetables (Carrots, Peas, Cauliflower, Beans)</li>
+            <li>Water</li>
+            <li>Fresh Coriander for garnishing</li>
+            <li>Lemon wedges (optional)</li>
+                </ul>
+                <h4>Instructions:</h4>
+                <ol>
+                    <li>Wash and soak Basmati rice in water for 30 minutes.</li>
+            <li>Heat ghee or oil in a large pot.</li>
+            <li>Add sliced onions and saute until golden brown.</li>
+            <li>Add ginger-garlic paste and green chillies. Saute for a minute.</li>
+            <li>Add chopped tomatoes and cook until soft.</li>
+            <li>Add all the spices (turmeric, red chilli powder, coriander powder, cumin powder, garam masala, cardamom powder) and mix well.</li>
+            <li>Add mixed vegetables and cook for 5-7 minutes.</li>
+            <li>Drain the soaked rice and add it to the pot.</li>
+            <li>Add enough water (usually 1.5 times the rice) and salt.</li>
+            <li>Bring to a boil, then reduce heat to low, cover and simmer for 15-20 minutes or until the rice is cooked and the water is absorbed.</li>
+            <li>Garnish with fresh coriander and serve hot with raita or yogurt.</li>
+                </ol>
+            </article>
+        </section>
+
+        <section id="add-recipe">
+            <h2>Add Your Recipe</h2>
+            <form id="recipeForm">
+                <label for="recipeName">Recipe Name:</label>
+                <input type="text" id="recipeName" name="recipeName" required>
+
+                <label for="ingredients">Ingredients:</label>
+                <textarea id="ingredients" name="ingredients" required></textarea>
+
+                <label for="instructions">Instructions:</label>
+                <textarea id="instructions" name="instructions" required></textarea>
+
+                <button type="button" onclick="addRecipe()">Submit</button>
+            </form>
+        </section>
+
+        <section id="open-recipe-page">
+            <h2>Explore More Recipes</h2>
+            <button type="button" onclick="openRecipePage()">Open Recipe Page</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 My Recipe Website</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veg Biryani Recipe</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem;
+        }
+
+        main {
+            padding: 2rem;
+        }
+
+        img {
+            max-width: 300px;
+            height: auto;
+            margin-bottom: 1rem;
+            border-radius: 5px;
+        }
+
+        h2 {
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Veg Biryani Recipe</h1>
+    </header>
+
+    <main>
+        <img src="veg_biryani.jpg" alt="Veg Biryani"> 
+        <h2>Ingredients:</h2>
+        <ul>
+            <li>2 cups Basmati Rice</li>
+            <li>1 medium Onion, sliced</li>
+            <li>1 medium Tomato, chopped</li>
+            <li>2 Green Chillies, slit</li>
+            <li>1 inch Ginger-Garlic Paste</li>
+            <li>1 tsp Turmeric Powder</li>
+            <li>1 tsp Red Chilli Powder</li>
+            <li>1 tsp Coriander Powder</li>
+            <li>1 tsp Cumin Powder</li>
+            <li>1 tsp Garam Masala</li>
+            <li>1/2 tsp Cardamom Powder</li>
+            <li>1/4 cup Mint Leaves</li>
+            <li>1/4 cup Coriander Leaves</li>
+            <li>2 tbsp Ghee or Oil</li>
+            <li>Salt to taste</li>
+            <li>Mixed Vegetables (Carrots, Peas, Cauliflower, Beans)</li>
+            <li>Water</li>
+            <li>Fresh Coriander for garnishing</li>
+            <li>Lemon wedges (optional)</li>
+        </ul>
+
+        <h2>Instructions:</h2>
+        <ol>
+            <li>Wash and soak Basmati rice in water for 30 minutes.</li>
+            <li>Heat ghee or oil in a large pot.</li>
+            <li>Add sliced onions and saute until golden brown.</li>
+            <li>Add ginger-garlic paste and green chillies. Saute for a minute.</li>
+            <li>Add chopped tomatoes and cook until soft.</li>
+            <li>Add all the spices (turmeric, red chilli powder, coriander powder, cumin powder, garam masala, cardamom powder) and mix well.</li>
+            <li>Add mixed vegetables and cook for 5-7 minutes.</li>
+            <li>Drain the soaked rice and add it to the pot.</li>
+            <li>Add enough water (usually 1.5 times the rice) and salt.</li>
+            <li>Bring to a boil, then reduce heat to low, cover and simmer for 15-20 minutes or until the rice is cooked and the water is absorbed.</li>
+            <li>Garnish with fresh coriander and serve hot with raita or yogurt.</li>
+        </ol>
+
+    </main>
+
+</body>
+</html> -->
