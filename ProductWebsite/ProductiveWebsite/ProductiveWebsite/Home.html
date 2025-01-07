@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Watches</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="Home.css">
+  <style>
+    /* Reduce the size of the navbar */
+    .navbar {
+      padding: 10px 0;
+    }
+
+    /* Increase the font size of the navbar tabs */
+    .navbar-nav .nav-link {
+      font-size: 18px;
+      padding: 8px 15px;
+    }
+
+    /* Align navbar items to the left */
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    /* Reduce the size of the footer */
+    footer {
+      padding: 10px 0;
+      font-size: 14px;
+    }
+
+    /* Styling for the product price */
+    .price {
+      font-size: 16px;
+      color: #28a745;
+      font-weight: bold;
+    }
+
+    /* Styling for the 'No Results' message */
+    .no-results {
+      font-size: 20px;
+      color: red;
+      text-align: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="logo">
+        <img src="Noise Logo - PNG Logo Vector Brand Downloads (SVG, EPS).jpeg" alt="Smart Watch Logo" class="logo-img" style="height: 40px;">
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="Home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="Contact.html">Contact Us</a></li>
+        </ul>
+        <div class="form-inline my-2 my-lg-0">
+          <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-light my-2 my-sm-0" type="button" onclick="searchProduct()">Search</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container mt-5">
+      <h1 class="text-center"><b>SMART WATCHES</b></h1>
+
+      <!-- Message for no search results -->
+      <div id="no-results" class="no-results" style="display: none;">No results found</div>
+
+      <!-- Product Cards  -->
+      <div id="product-list" class="row mt-4">
+        <!-- Product Cards will be dynamically inserted here -->
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-dark text-light text-center">
+    <p>&copy; 2024 Noise Electronics </p>
+  </footer>
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    const products = [
+      { id: 1, name: 'Noise Storm Call 3', price: '₹1199', image: 'NoiseStormcall3.webp', detailsPage: 'NoiseStormcall3.html' },
+      { id: 2, name: 'Noise Wave Fury', price: '₹1299', image: 'NoiseWaveFury.jpg', detailsPage: 'Noise WaveFury.html' },
+      { id: 3, name: 'Noise Lunar Discovery', price: '₹1399', image: 'NoiseLunarDiscovery.webp', detailsPage: 'Noise LunarDiscovery.html' },
+      { id: 4, name: 'Noise Lunar Vista', price: '₹1999', image: 'NoiseLunarVista.webp', detailsPage: 'Noise LunarVista.html' },
+      { id: 5, name: 'Noise Ultima Regal', price: '₹2599', image: 'NoiseUltimaRegal.webp', detailsPage: 'Noise UltimaRegal.html' },
+      { id: 6, name: 'Noise Ultima Select', price: '₹2799', image: 'NoiseUltimaSelect.webp', detailsPage: 'Noise UltimaSelect.html' },
+    ];
+
+    // Display all products initially
+    function displayProducts(filteredProducts = products) {
+      const productList = document.getElementById('product-list');
+      productList.innerHTML = ''; // Clear existing products
+      filteredProducts.forEach(product => {
+        const productCard = `
+          <div class="col-md-4">
+            <div class="card">
+              <img src="${product.image}" class="card-img-top" alt="${product.name}">
+              <div class="card-body">
+                <h5 class="card-title">${product.name}</h5>
+                <p class="price">${product.price}</p>
+                <button class="btn btn-primary" onclick="viewMore('${product.detailsPage}')">View More</button>
+              </div>
+            </div>
+          </div>
+        `;
+        productList.innerHTML += productCard;
+      });
+
+      // Hide 'No results' message if products are found
+      const noResultsMessage = document.getElementById('no-results');
+      if (filteredProducts.length === 0) {
+        noResultsMessage.style.display = 'block';
+      } else {
+        noResultsMessage.style.display = 'none';
+      }
+    }
+
+    // Search product based on user input
+    function searchProduct() {
+      const searchInput = document.getElementById('search-input').value.toLowerCase();
+      const filteredProducts = products.filter(product => product.name.toLowerCase().includes(searchInput));
+      displayProducts(filteredProducts);
+    }
+
+    // Redirect to the respective product detail page
+    function viewMore(detailsPage) {
+      window.location.href = detailsPage;
+    }
+
+    // Initial display of products
+    displayProducts();
+  </script>
+</body>
+</html>
